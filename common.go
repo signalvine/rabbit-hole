@@ -40,6 +40,8 @@ type BrokerContext struct {
 
 // Basic published messages statistics
 type MessageStats struct {
+	Ack                 int         `json:"ack"`
+	AckDetails          RateDetails `json:"ack_details"`
 	Publish             int         `json:"publish"`
 	PublishDetails      RateDetails `json:"publish_details"`
 	Deliver             int         `json:"deliver"`
